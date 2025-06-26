@@ -91,7 +91,15 @@ idea:
 
 code: :heavy_multiplication_x:
 
+### [TLogic: Temporal Logical Rules for Explainable Link Forecasting on Temporal Knowledge Graphs | Proceedings of the AAAI Conference on Artificial Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/20330)
 
+conference: AAAI2022
+
+idea:应该是第一篇在时序知识图谱推断任务中使用规则进行推理的论文，后面的很多基于规则的论文都是以此为基础的。论文所提方法由**Rule Learning**、**Rule Application**和**Candidate Ranking**三个模块组成。第一个模块是根据训练数据进行提取规则，提取规则核心就是用到了一个random walk的概念，具体而言就是从每一个关系出发，随机选择一个是这个关系的四元组，然后从这个四元组出发，沿着时间轴反方向寻找能够回到这个四元组的路径。如果能够回到，则表明这个规则是成立的。随机游走完全是跟着时间来的，时间距离上一个四元组越近，则被选择的概率越大。第二模块就是应用第一步提取到的规则，具体而言，对于其中一个的测试四元组，选择对应这个规则关系对应的body_rules，然后找到满足关系的路径，最后一个实体即被认为是候选实体，然后计算每个候选实体的score。第三个模块就是评估方法的性能，直接计算hit@k和MRR，hit@k越大越好，MRR越小越好。
+
+<img src="F:\git_learning\paper_learning\image\屏幕截图 2025-06-26 161430.png" alt="屏幕截图 2025-06-26 161430" style="zoom:75%;" />
+
+code: ✔,代码复现结果和论文中基本一致。
 
 
 
