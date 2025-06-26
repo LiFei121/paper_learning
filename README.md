@@ -63,6 +63,16 @@ conference: ACL
 
 idea: 
 
+## 2023
+
+### [Temporal Knowledge Graph Forecasting Without Knowledge Using In-Context Learning - ACL Anthology](https://aclanthology.org/2023.emnlp-main.36/)
+
+conference: EMNLP2023
+
+idea:
+
+code: ✔
+
 
 
 ## 2022
