@@ -6,7 +6,7 @@
 
 ### [LLM-DR: A Novel LLM-Aided Diffusion Model for Rule Generation on Temporal Knowledge Graphs | Proceedings of the AAAI Conference on Artificial Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/33249)
 
-conference: AAAI
+conference: AAAI2025
 
 idea:
 
@@ -14,7 +14,7 @@ code: :heavy_multiplication_x:
 
 ### [**DPCL-Diff: Temporal Knowledge Graph Reasoning Based on Graph Node**Diffusion Model with Dual-Domain Periodic Contrastive Learning](https://arxiv.org/pdf/2411.01477)
 
-conference: AAAI
+conference: AAAI2025
 
 idea:主要得创新应该是引入了扩散模型，但未公开代码，本身又没接触过扩散模型，估计难以复现。
 
@@ -22,7 +22,7 @@ code::heavy_multiplication_x:
 
 ### [Tackling Sparse Facts for Temporal Knowledge Graph Completion](file:///F:/git_learning/paper_learning/paper/TacklingSparseFactsforTemporalKnowledgeGraphCompletion.pdf)
 
-conference: WWW
+conference: WWW2025
 
 idea: 这篇论文的核心思想是：为解决时序知识图谱（TKG）中因事实稀疏导致的预测不准问题，提出一种即插即用的自适应邻域增强层（ANEL），通过动态挖掘同时间窗的潜在相似邻居（即使无显式连接），并基于实体邻居数量自适应加权融合潜在信息（稀疏实体依赖更强，稠密实体依赖更弱），显著提升稀疏实体的表示质量，从而提升补全性能。
 
@@ -43,15 +43,15 @@ code: :heavy_multiplication_x:，代码失效了
 
 ### [Large Language Models-guided Dynamic Adaptation for Temporal Knowledge Graph Reasoning](https://proceedings.neurips.cc/paper_files/paper/2024/file/0fd17409385ab9304e5019c6a6eb327a-Paper-Conference.pdf)
 
-conference: NIPS
+conference: NIPS2024
 
-idea:
+idea:这篇论文受说实话有点整合论文Temporal Knowledge Graph Forecasting Without Knowledge Using In-Context Learning - ACL Anthology和TLogic: Temporal Logical Rules for Explainable Link Forecasting on Temporal Knowledge Graphs | Proceedings of the AAAI Conference on Artificial Intelligence这两篇论文。论文和核心思想是首先采用TLogic中提取规则的方法，然后再评估每个关系的相似度，将这两个东西放到LLM中去，让LLM更新TLogic提取到的规则。后面再就是，这篇论文用到了验证集，验证集的主要功能其实是评估在训练数据中提取到的规则是否适用于验证集，模型会再一次提取验证集中的规则来更新在训练集中提取到的规则，模型的最后一部分就是根据规则进行推理，此外最后一部分其实是由两个模块组成的，一个是基于规则的推理，一个是基于图神经网络的推理。所以说作者提出的方法其实是方法大杂糅。
 
 code:  ✔
 
 ### [LLM4DyG: Can Large Language Models Solve Spatial-Temporal Problems on Dynamic Graphs?](https://dl.acm.org/doi/pdf/10.1145/3637528.3671709)
 
-conference: KDD
+conference: KDD2024
 
 idea: 
 
@@ -59,7 +59,7 @@ code: ✔
 
 ### [AUnified Temporal Knowledge Graph Reasoning Model Towards Interpolation and Extrapolation](https://aclanthology.org/2024.acl-long.8.pdf)
 
-conference: ACL
+conference: ACL2024
 
 idea: 
 
@@ -79,7 +79,7 @@ code: ✔
 
 ### [Graph Hawkes Transformer for Extrapolated Reasoning on Temporal Knowledge Graphs](https://aclanthology.org/2022.emnlp-main.507.pdf)
 
-conference: EMNLP
+conference: EMNLP2022
 
 idea:
 
@@ -87,7 +87,7 @@ code: ✔
 
 ### [Search to Pass Messages for Temporal Knowledge Graph Completion](https://aclanthology.org/2022.findings-emnlp.458.pdf)
 
-conference: EMNLP
+conference: EMNLP2022
 
 idea:
 
