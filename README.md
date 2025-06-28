@@ -49,6 +49,14 @@ idea:这篇论文受说实话有点整合论文Temporal Knowledge Graph Forecast
 
 code:  ✔
 
+### [ONSEP: A Novel Online Neural-Symbolic Framework for Event Prediction Based on Large Language Model](https://aclanthology.org/2024.findings-acl.378/)
+
+conference: ACL2024
+
+idea: 这篇论文其实思想还是十分简单的，先初步提取规则，然后让大模型判断规则是否合理，也会使用当前的数据不断地更新规则。这篇论文提前规则和TLogic论文提取规则不同，对于一个四元组，他是直接在历史数据中筛选头实体和尾实体一样的四元组，然后认为这个四元组对应的关系实体和原来的关系实体有关系。如何也会计算一些关系的置信度，总而言之计算方法和TLogic是有点不一样，而且他提前的规则其实就是只有1步的，感觉很粗糙。
+
+code: :x:，论文中写了开源，但是GitHub仓库已经是空的了
+
 ### [LLM4DyG: Can Large Language Models Solve Spatial-Temporal Problems on Dynamic Graphs?](https://dl.acm.org/doi/pdf/10.1145/3637528.3671709)
 
 conference: KDD2024
@@ -107,7 +115,7 @@ conference: AAAI2022
 
 idea:应该是第一篇在时序知识图谱推断任务中使用规则进行推理的论文，后面的很多基于规则的论文都是以此为基础的。论文所提方法由**Rule Learning**、**Rule Application**和**Candidate Ranking**三个模块组成。第一个模块是根据训练数据进行提取规则，提取规则核心就是用到了一个random walk的概念，具体而言就是从每一个关系出发，随机选择一个是这个关系的四元组，然后从这个四元组出发，沿着时间轴反方向寻找能够回到这个四元组的路径。如果能够回到，则表明这个规则是成立的。随机游走完全是跟着时间来的，时间距离上一个四元组越近，则被选择的概率越大。第二模块就是应用第一步提取到的规则，具体而言，对于其中一个的测试四元组，选择对应这个规则关系对应的body_rules，然后找到满足关系的路径，最后一个实体即被认为是候选实体，然后计算每个候选实体的score。第三个模块就是评估方法的性能，直接计算hit@k和MRR，hit@k越大越好，MRR越小越好。
 
-<img src="F:\git_learning\paper_learning\image\屏幕截图 2025-06-26 161430.png" alt="屏幕截图 2025-06-26 161430" style="zoom:75%;" />
+<img src="image\屏幕截图 2025-06-26 161430.png" alt="屏幕截图 2025-06-26 161430" style="zoom:75%;" />
 
 code: ✔,代码复现结果和论文中基本一致。
 
